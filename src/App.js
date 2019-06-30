@@ -9,8 +9,10 @@ import Home from './components/Home'
 import Comandas from './components/Comandas'
 import Admin from './components/Admin'
 import Caixas from './components/Caixas'
+import Clientes from './components/Clientes'
 
 class App extends Component {
+
   render() {
      return (
        <Router>
@@ -20,6 +22,7 @@ class App extends Component {
               <Link className="nav-link active mr-5" to="/">Net Link</Link>
               <Link className="nav-link mr-5" to="/comandas">Comandas</Link>
               <Link className="nav-link mr-5" to="/caixas">Caixas</Link>
+              <Link className="nav-link mr-5" to="/clientes">Clientes</Link>
               <Link className="nav-link" to="/admin" tabindex="-1" aria-disabled="true">Administração</Link>
             </nav>
           </div>
@@ -28,8 +31,11 @@ class App extends Component {
             <Route path='/comandas' component={Comandas} />
             <Route exact path='/admin' component={Admin} />
             <Route exact path='/caixas' component={Caixas} />
+            <Route path='/clientes' component={Clientes} />
           </div>
         </div>
+
+
       </Router>
     )
   }
